@@ -7,6 +7,31 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    nav.navbar.navbar-default.navbar-custom.navbar-fixed-top
+      .container-fluid
+        .navbar-header.page-scroll
+          button.navbar-toggle[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+            span.sr-only
+              | Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand[href="index.html"]
+            | Start Bootstrap
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a[href="index.html"]
+                | Home
+            li
+              a[href="about.html"]
+                | About
+            li
+              a[href="post.html"]
+                | Sample Post
+            li
+              a[href="contact.html"]
+                | Contact
     - if notice
       p.alert.alert-success
         = notice
@@ -14,3 +39,27 @@ html
       p.alert.alert-danger
         = alert
     = yield
+    hr
+    footer
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            ul.list-inline.text-center
+              li
+                a[href="#"]
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
+              li
+                a[href="#"]
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-facebook.fa-stack-1x.fa-inverse
+              li
+                a[href="#"]
+                  span.fa-stack.fa-lg
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-github.fa-stack-1x.fa-inverse
+            p.copyright.text-muted
+              | Copyright © Your Website 2014
+
